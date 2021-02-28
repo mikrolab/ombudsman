@@ -41,18 +41,9 @@ $(document).ready(function () {
     });
 
     if (validator.form()) {
-      // alert('Form Submitted..');
+      
     }
   });
-  // $("#myfile").change(function(){
-  //   $("#file-name").text(this.files[0].name);
-  // });
-  // $("#mysign").change(function(){
-  //   $("#sign-name").text(this.files[0].name);
-  // });
-  // $("#mysignature").change(function(){
-  //   $("#signature-name").text(this.files[0].name);
-  // });
   $('#myfile').change(function() {
     var i = $(this).prev('label').clone();
     var file = $('#myfile')[0].files[0].name;
