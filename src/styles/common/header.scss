@@ -1,0 +1,25 @@
+@import "../mixins/media";
+
+.header {
+  background-color: #8A1E36;
+  height: 185px;
+  text-align: center;
+}
+
+.header__logo {
+  padding-top: 40px;
+  padding-bottom: 46px;
+  height: 99px;
+}
+
+@media (max-width: 350px) {
+  .header {
+    height: 175px;
+  }
+
+  .header__logo {
+    height: 90px;
+    padding-top: 35px;
+    padding-bottom: 41px;
+  }
+}

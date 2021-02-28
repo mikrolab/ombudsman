@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <img src="img/logo.png" alt="logo" class="header__logo">
+    </div>
+  </header>
+
+  <main>
+    <section class="info">
+      <div class="container">
+        <h1 class="info__title">
+          <p>Онлайн приймальня</p>
+          <p>Уповноваженого Верховної Ради України з прав людини</p>
+        </h1>
+        <div class="info__block">
+          <h3 class="info__block-title">Шановні заявники!</h3>
+          <div class="info__block-text">
+            <p>
+              Відповідно до Законів України «Про Уповноваженого Верховної Ради України з прав людини» та «Про
+              звернення
+              громадян», якщо ваше право порушено органами державної влади, органами місцевого самоврядування та їх
+              посадовими і службовими особами, а також юридичними та фізичними особами, ви можете звернутися до
+              Уповноваженого Верховної Ради України з прав людини.
+            </p>
+            <p>Не підлягають розгляду Уповноваженим звернення про порушення прав і свобод, які є предметом
+              досудового або
+              судового розгляду (в рамках кримінального, цивільного процесу, адміністративного судочинства) або
+              трудового
+              спору чи спору в рамках законодавства про захист економічної конкуренції, виконавчого провадження, справ
+              про корупційні правопорушення.
+            </p>
+            <p>
+              Ви можете подати звернення Уповноваженому протягом року після виявлення порушення прав і свобод
+              людини і
+              громадянина. За наявності виняткових обставин цей строк може бути подовжений Уповноваженим, але не більше
+              ніж до двох років.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="appeal">
+      <div class="container">
+        <form action="" id="form__appeal" name="form__appeal">
+          <div class="appeal__form">
+            <h2 class="appeal__form-title">
+              електронне звернення
+            </h2>
+            <p class="appeal__form-label">ПІБ: <span>*</span></p>
+            <div class="appeal__form-name">
+              <div class="input__wrapper">
+                <input type="text" class="appeal__form-input" id="fsurname" name="fsurname" placeholder="Прізвище" required>
+              </div>
+              <div class="input__wrapper">
+                <input type="text" class="appeal__form-input" id="fname" name="fname" placeholder="Ім'я" required>
+              </div>
+              <div class="input__wrapper">
+                <input type="text" class="appeal__form-input" id="fpatronymic" name="fpatronymic"
+                  placeholder="По батькові" required>
+              </div>
+            </div>
+            <div class="appeal__form-address">
+              <p class="appeal__form-label">Адреса: <span>*</span></p>
+              <div class="input__wrapper">
+                <textarea type="text" rows="2" class="appeal__form-input" id="fcity" name="fcity" placeholder="(область, район, населений пункт,
+вулиця, тощо)" required></textarea>
+              </div>
+              <div class="input__wrapper address">
+                <input type="text" class="appeal__form-input" id="faddress" name="faddress"
+                  placeholder="(№ будинку, корпус, квартира)" required>
+              </div>
+            </div>
+            <div class="appeal__form-contact">
+              <p class="appeal__form-label">E-mail: <span>*</span></p>
+              <div class="input__wrapper">
+                <input type="email" class="appeal__form-input contact__input" id="fmail" name="fmail"
+                  placeholder="E-mail" required>
+              </div>
+              <p class="appeal__form-label">Контактний телефон:</p>
+              <input type="text" class="appeal__form-input contact__input" placeholder="(за бажанням)">
+              <p class="appeal__form-label">Текст повідомлення: <span>*</span></p>
+              <div class="input__wrapper">
+                <textarea type="text" class="appeal__form-input" id="fmessage" name="fmessage" placeholder="Повідомлення" required></textarea>
+              </div>
+              <div class="appeal__form-additon">
+                <p>
+                  Додатки: (завантажити супровідні документи)
+                </p>
+                <div class="appeal__form-additionBtn">
+                  <label for="myfile" class="fileLabel">Обрати файл</label>
+                  <input type="file" class="fileBtn" id="myfile" name="myfile" multiple="multiple" />
+                </div>
+              </div>
+              <div class="appeal__form-signature">
+                <p class="appeal__form-label">Підпис: <span>*</span></p>
+                <div class="appeal__form-additionBtn">
+                  <label for="mysign" class="fileLabel">Підписати звернення ЕЦП (за бажанням)</label>
+                  <input type="file" class="fileBtn" id="mysign" name="mysign"/>
+                </div>
+                <div class="appeal__form-additionBtn">
+                  <label for="mysignature" class="fileLabel">Завантажити PDF, JPEG, JPG файл з підписом</label>
+                  <input type="file" class="fileBtn" id="mysignature" name="mysignature"
+                    accept="application/pdf,image/jpeg,image/jpg"/>
+                </div>
+              </div>
+              <p class="appeal__form-reference"><span>*</span> – обовязкові поля для заповнення!</p>
+              <button class="appeal__form-btn" type="submit" id="validateBtn">Відправити звернення</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="attention">
+      <div class="container">
+        <div class="attention__text">
+          <p>
+            Увага!</br>
+            Не підписане електронне звернення, а також таке, з якого неможливо встановити авторство, визнається
+            анонімним і розгляду
+            не підлягає.
+          </p>
+          <p>
+            Реєстраційний номер звернення буде надісланий на зазначений е-mail!
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__wrapper-hotline">
+          <p>
+            Гаряча лінія
+            Уповноваженого ВРУ
+            з прав людини
+          </p>
+          <p><a href="tel:08005001720" class="footer__wrapper-phone">0-800-500-17-20</a></p>
+        </div>
+        <div class="footer__wrapper-social">
+          <a href="https://www.youtube.com/channel/UCSqAq9COay89TfSjZ9WrpeQ"><img src="img/youtube.png" alt="youtube"></a>
+          <a href="https://www.facebook.com/office.ombudsman.ua"><img src="img/facebook.png" alt="facebook"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+<script src='js/main.min.js'></script>
+
+</html>

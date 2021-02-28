@@ -1,0 +1,54 @@
+.input__wrapper {
+  position: relative;
+}
+
+label.error {
+  font-size: 0;
+  position: absolute;
+  background: url(../img/error.png);
+  background-size: 34px;
+  height: 80px;
+  width: 155px;
+  background-repeat: no-repeat;
+  padding-left: 46px;
+  z-index: 12;
+  padding-top: 8px;
+  color: #FFFFFF;
+  background-position-y: 5px;
+  right: -156px;
+
+  &:hover {
+    font-size: 14px;
+    background: url(../img/error.png), url(../img/errorText.png);
+    background-repeat: no-repeat;
+    background-size: 34px, 150px;
+    background-position-x: left, 43px;
+    background-position-y: 5px, 0;
+  }
+}
+
+#file-name, #sign-name, #signature-name {
+  font-size: 12px;
+  line-height: 30px;
+  position: absolute;
+  width: max-content;
+  left: 0;
+}
+
+@media (max-width: 1184px) {
+  label.error {
+    background-position-x: right;
+    right: 6px;
+    padding-left: 11px;
+    padding-right: 35px;
+
+    &:hover {
+      background: url(../img/error.png), url(../img/errorTextMob.png);
+      font-size: 12px;
+      background-repeat: no-repeat;
+      background-size: 34px, 150px 50px;
+      background-position-x: right, 16px;
+      background-position-y: 5px, 0;
+    }
+  }
+}

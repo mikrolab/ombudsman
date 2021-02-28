@@ -1,0 +1,152 @@
+.footer {
+  background-color: #E5E5E5;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 65px 0;
+  align-items: center;
+}
+
+.footer__wrapper-hotline {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #000000;
+
+  p {
+    margin: 0;
+
+    &:first-child {
+      width: 45%;
+    }
+
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+}
+
+.footer__wrapper-phone {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+  color: #3A3C3D;
+  margin-top: 10px;
+}
+
+.footer__wrapper-social {
+  display: flex;
+
+  a {
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__wrapper-hotline {
+    width: 75%;
+
+    p {
+
+      &:first-child {
+        width: 51%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer__wrapper-hotline {
+    width: 100;
+
+    p {
+
+      &:first-child {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  .footer__wrapper-social {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 530px) {
+  .footer__wrapper-hotline {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .footer__wrapper-phone {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .footer__wrapper-social {
+    img {
+      width: 60px;
+    }
+  }
+
+  .appeal__form-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .appeal__form-label {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .appeal__form-input {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .appeal__form-additon {
+    p {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .fileLabel {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .appeal__form-reference {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .appeal__form-btn {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 470px) {
+  .appeal__form-signature {
+    label {
+      padding: 3px 0;
+    }
+  }
+}
