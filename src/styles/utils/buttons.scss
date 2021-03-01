@@ -1,7 +1,9 @@
 .fileLabel {
   text-align: center;
   cursor: pointer;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-transition: all .18s ease-in-out;
   transition: all .18s ease-in-out;
   font-style: normal;

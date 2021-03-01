@@ -60,33 +60,30 @@ $(document).ready(function () {
           url: "https://ombudsman-api.id-c.com.ua/api/feedback",
           data: form_data,
           success: function () {
+            $("#form__appeal").css("opacity", "0");
+            setTimeout(function () {
+              $("#form__appeal").css("display", "none");
+            }, 500)
+            $(".form__sent").css("display", "block");
+            setTimeout(function () {
+              $(".form__sent").css("opacity", "1");
+            }, 500)
           }
         });
       });
-      
-      $("#form__appeal").css("opacity", "0");
-      setTimeout(function(){
-        $("#form__appeal").css("display", "none");
-      }, 500)
-      $(".form__sent").css("display", "block");
-      setTimeout(function(){
-        $(".form__sent").css("opacity", "1");
-      }, 500)
     }
   });
-  $('#myfile').change(function() {
+  $('#myfile').change(function () {
     var i = $(this).prev('label').clone();
-    var file = $('#myfile')[0].files[0].name;
-    $(this).prev('label').text(file);
+    // var file = $('#myfile')[0].files[0].name;
+    $(this).prev('label').text('Файл обрано');
   });
-  $('#mysign').change(function() {
+  $('#mysign').change(function () {
     var i = $(this).prev('label').clone();
-    var file = $('#mysign')[0].files[0].name;
-    $(this).prev('label').text(file);
+    $(this).prev('label').text('Файл обрано');
   });
-  $('#mysignature').change(function() {
+  $('#mysignature').change(function () {
     var i = $(this).prev('label').clone();
-    var file = $('#mysignature')[0].files[0].name;
-    $(this).prev('label').text(file);
+    $(this).prev('label').text('Файл обрано');
   });
 });
