@@ -51,14 +51,13 @@ $(document).ready(function () {
         form_data.append('email', $(this).find("input[name='fmail']").val());
         form_data.append('phone', $(this).find("input[name='fphone']").val());
         form_data.append('message', $(this).find("textarea[name='fmessage']").val());
-        if ($("#mysign").val() != '') {
-          form_data.append('file_with_eds', $("#mysign").prop('files')[0]);
-        }
+        // if ($("#mysign").val() != '') {
+        //   form_data.append('file_with_eds', $("#mysign").prop('files')[0]);
+        // }
         if ($("#myfile").val() != '') {
           form_data.append('additional_files', $("#myfile").prop('files')[0]);
         }
-        form_data.append('eds', $("#mysignature").prop('files')[0]);
-        console.log(form_data);
+        form_data.append('file_with_eds', $("#mysignature").prop('files')[0]);
         $.ajax({
           type: "POST",
           url: "https://ombudsman-api.id-c.com.ua/api/feedback",
