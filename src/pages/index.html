@@ -64,7 +64,8 @@
             <p class="appeal__form-label">ПІБ: <span>*</span></p>
             <div class="appeal__form-name">
               <div class="input__wrapper">
-                <input type="text" class="appeal__form-input" id="fsurname" name="fsurname" placeholder="Прізвище" required>
+                <input type="text" class="appeal__form-input" id="fsurname" name="fsurname" placeholder="Прізвище"
+                  required>
               </div>
               <div class="input__wrapper">
                 <input type="text" class="appeal__form-input" id="fname" name="fname" placeholder="Ім'я" required>
@@ -92,10 +93,11 @@
                   placeholder="E-mail" required>
               </div>
               <p class="appeal__form-label">Контактний телефон:</p>
-              <input type="text" class="appeal__form-input contact__input" placeholder="(за бажанням)">
+              <input type="text" class="appeal__form-input contact__input" name="fphone" placeholder="(за бажанням)">
               <p class="appeal__form-label">Текст повідомлення: <span>*</span></p>
               <div class="input__wrapper">
-                <textarea type="text" class="appeal__form-input" id="fmessage" name="fmessage" placeholder="Повідомлення" required></textarea>
+                <textarea type="text" class="appeal__form-input" id="fmessage" name="fmessage"
+                  placeholder="Повідомлення" required></textarea>
               </div>
               <div class="appeal__form-additon">
                 <p>
@@ -103,19 +105,21 @@
                 </p>
                 <div class="appeal__form-additionBtn">
                   <label for="myfile" class="fileLabel">Обрати файл</label>
-                  <input type="file" class="fileBtn" id="myfile" name="myfile" multiple="multiple" />
+                  <input type="file" class="fileBtn" id="myfile" name="myfile" multiple="multiple"
+                    accept="application/pdf,image/jpeg,image/jpg,image/png" />
                 </div>
               </div>
               <div class="appeal__form-signature">
                 <p class="appeal__form-label">Підпис: <span>*</span></p>
                 <div class="appeal__form-additionBtn">
                   <label for="mysign" class="fileLabel">Підписати звернення ЕЦП (за бажанням)</label>
-                  <input type="file" class="fileBtn" id="mysign" name="mysign"/>
+                  <input type="file" class="fileBtn" id="mysign" name="mysign"
+                    accept="application/pdf,image/jpeg,image/jpg,image/png" />
                 </div>
                 <div class="appeal__form-additionBtn">
                   <label for="mysignature" class="fileLabel">Завантажити PDF, JPEG, JPG файл з підписом</label>
                   <input type="file" class="fileBtn" id="mysignature" name="mysignature"
-                    accept="application/pdf,image/jpeg,image/jpg"/>
+                    accept="application/pdf,image/jpeg,image/jpg,image/png" />
                 </div>
               </div>
               <p class="appeal__form-reference"><span>*</span> – обовязкові поля для заповнення!</p>
@@ -123,6 +127,11 @@
             </div>
           </div>
         </form>
+        <div class="form__sent">
+          <h2 class="appeal__form-title">
+            дякуємо за звернення
+          </h2>
+        </div>
       </div>
     </section>
     <section class="attention">
@@ -154,7 +163,8 @@
           <p><a href="tel:08005001720" class="footer__wrapper-phone">0-800-500-17-20</a></p>
         </div>
         <div class="footer__wrapper-social">
-          <a href="https://www.youtube.com/channel/UCSqAq9COay89TfSjZ9WrpeQ"><img src="img/youtube.png" alt="youtube"></a>
+          <a href="https://www.youtube.com/channel/UCSqAq9COay89TfSjZ9WrpeQ"><img src="img/youtube.png"
+              alt="youtube"></a>
           <a href="https://www.facebook.com/office.ombudsman.ua"><img src="img/facebook.png" alt="facebook"></a>
         </div>
       </div>

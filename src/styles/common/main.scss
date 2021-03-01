@@ -69,6 +69,7 @@ main {
   line-height: 50px;
   color: #8A1E36;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .appeal__form-label {
@@ -229,6 +230,17 @@ main {
 
 .appeal__form-additionBtn {
   position: relative;
+}
+
+#form__appeal{
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.form__sent{
+  display: none;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 // section 3
