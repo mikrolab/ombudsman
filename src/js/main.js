@@ -55,7 +55,11 @@ $(document).ready(function () {
         //   form_data.append('file_with_eds', $("#mysign").prop('files')[0]);
         // }
         if ($("#myfile").val() != '') {
-          form_data.append('additional_files', $("#myfile").prop('files')[0]);
+          // form_data.append('additional_files', $("#myfile").prop('files')[0]);
+          var totalfiles = $("#myfile").prop('files').length;
+          for (var index = 0; index < totalfiles; index++) {
+            form_data.append("additional_files[]", $("#myfile").prop('files')[index]);
+          }
         }
         form_data.append('file_with_eds', $("#mysignature").prop('files')[0]);
         $.ajax({

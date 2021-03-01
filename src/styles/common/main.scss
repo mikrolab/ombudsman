@@ -232,15 +232,22 @@ main {
   position: relative;
 }
 
-#form__appeal{
+#form__appeal {
   transition: 0.5s;
   opacity: 1;
 }
 
-.form__sent{
+.form__sent {
   display: none;
   transition: 0.5s;
   opacity: 0;
+
+  h2 {
+    border: 2px solid #8a1e36;
+    width: fit-content;
+    padding: 30px;
+    margin: 20px auto;
+  }
 }
 
 // section 3
