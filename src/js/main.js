@@ -62,6 +62,7 @@ $(document).ready(function () {
           }
         }
         form_data.append('file_with_eds', $("#mysignature").prop('files')[0]);
+        $('#validateBtn').attr('disabled', 'disabled');
         $.ajax({
           type: "POST",
           url: "https://ombudsman-api.id-c.com.ua/api/feedback",
@@ -77,6 +78,9 @@ $(document).ready(function () {
             setTimeout(function () {
               $(".form__sent").css("opacity", "1");
             }, 500)
+          },
+          error: function () {
+            $('#validateBtn').attr('disabled', 'false');
           },
         });
       });
