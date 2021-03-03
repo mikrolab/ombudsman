@@ -43,9 +43,9 @@ $(document).ready(function () {
       $("#form__appeal").submit(function (e) {
         e.preventDefault();
         var form_data = new FormData;
-        form_data.append('first_name', $(this).find("input[name='fsurname']").val());
-        form_data.append('middle_name', $(this).find("input[name='fname']").val());
-        form_data.append('last_name', $(this).find("input[name='fpatronymic']").val());
+        form_data.append('first_name', $(this).find("input[name='fname']").val());
+        form_data.append('middle_name', $(this).find("input[name='fpatronymic']").val());
+        form_data.append('last_name', $(this).find("input[name='fsurname']").val());
         form_data.append('address', $(this).find("textarea[name='fcity']").val());
         form_data.append('apartment_number', $(this).find("input[name='faddress']").val());
         form_data.append('email', $(this).find("input[name='fmail']").val());
@@ -86,16 +86,83 @@ $(document).ready(function () {
       });
     }
   });
-  $('#myfile').change(function () {
-    var i = $(this).prev('label').clone();
-    $(this).prev('label').text('Файл обрано');
-  });
-  $('#mysign').change(function () {
-    var i = $(this).prev('label').clone();
-    $(this).prev('label').text('Файл обрано');
-  });
-  $('#mysignature').change(function () {
-    var i = $(this).prev('label').clone();
-    $(this).prev('label').text('Файл обрано');
-  });
+
+  var pageName = null;
+  const pathName = window.location.pathname
+  const pathIndex = window.location.pathname.lastIndexOf('/') + 1
+  pageName = pathName.substring(pathIndex)
+  console.log(pageName)
+  switch (pageName){
+    case '':
+      $('#myfile').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл обрано');
+      });
+      $('#mysign').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл обрано');
+      });
+      $('#mysignature').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл обрано');
+      });
+      break;
+    case 'rus.html':
+      $('#myfile').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл выбран');
+      });
+      $('#mysign').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл выбран');
+      });
+      $('#mysignature').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл выбран');
+      });
+    break;
+    case 'cri.html':
+      $('#myfile').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл обрано');
+      });
+      $('#mysign').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл обрано');
+      });
+      $('#mysignature').change(function () {
+        var i = $(this).prev('label').clone();
+        $(this).prev('label').text('Файл обрано');
+      });
+      break;
+  }
+  var fontIncrease = 0;
+  $('#plus').click(function () {
+    $(".font").css('font-size','+=5');
+    $(".font").css('line-height','+=5' + 'px');
+    $('.appeal__form-signature').find('label').css('height', '+=40' + 'px');
+    $('.appeal__form-additon').find('label').css('height', '+=20' + 'px');
+    $('.appeal__form-input').css('height','+=5' + 'px');
+    fontIncrease++;
+    if(fontIncrease == 1){
+      $('#minus').css('display', 'block');
+    }
+    if(fontIncrease == 2){
+      $('#plus').css('display', 'none');
+    }
+  })
+  $('#minus').click(function () {
+    $(".font").css('font-size','-=5');
+    $(".font").css('line-height','-=5' + 'px');
+    $('.appeal__form-signature').find('label').css('height', '-=40' + 'px');
+    $('.appeal__form-additon').find('label').css('height', '-=20' + 'px');
+    $('.appeal__form-input').css('height','-=5' + 'px');
+    fontIncrease--;
+    if(fontIncrease == 0){
+      $('#minus').css('display', 'none');
+    }
+    if(fontIncrease != 0){
+      $('#plus').css('display', 'block');
+    }
+  })
 });

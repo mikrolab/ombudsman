@@ -48,6 +48,32 @@
   }
 }
 
+.fontsBtn {
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+
+  .fontsBtn__plus {
+    background-image: url(../img/plus.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .fontsBtn__minus {
+    background-image: url(../img/minus.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+  }
+}
+
 @media (max-width: 768px) {
   .footer__wrapper-hotline {
     width: 75%;
@@ -85,6 +111,11 @@
 
   .footer__wrapper-social {
     margin-top: 40px;
+  }
+
+  .fontsBtn {
+    right: 2rem;
+    bottom: 2rem;
   }
 }
 

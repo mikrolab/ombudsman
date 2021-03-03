@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн приймальня</title>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="header__info font">
+    <p>Внимание сервис работает в тестовом режиме</p>
+  </div>
+  <header class="header">
+    <div class="container">
+      <img src="img/logo.png" alt="logo" class="header__logo">
+    </div>
+  </header>
+
+  <main>
+    <section class="info">
+      <div class="container">
+        <div class="info__languagues font"><a href="/">Укр</a> / <a href="rus.html" class="active">Рус</a> / <a
+            href="cri.html">Кры</a></div>
+        <h1 class="info__title font">
+          <p>Онлайн приемная</p>
+          <p>Уполномоченного Верховной Рады Украины по правам человека</p>
+        </h1>
+        <div class="info__block">
+          <h3 class="info__block-title font">Уважаемые заявители!</h3>
+          <div class="info__block-text font">
+            <p>
+              В соответствии с Законами Украины «Об Уполномоченном Верховной Рады Украины по правам человека» и «О
+              обращении
+              граждан», если ваше право нарушено органами государственной власти, органами местного самоуправления и их
+              должностными и служебными лицами, а также юридическими и физическими лицами, вы можете обратиться к
+              Уполномоченного Верховной Рады Украины по правам человека.
+            </p>
+            <p>Не подлежат рассмотрению Уполномоченным обращение о нарушении прав и свобод, которые являются предметом
+              досудебного или
+              судебного разбирательства (в рамках уголовного, гражданского процесса, административного судопроизводства)
+              или
+              трудового
+              спора или спора в рамках законодательства о защите экономической конкуренции, исполнительного
+              производства, дел
+              о коррупционных правонарушениях.
+            </p>
+            <p>
+              Вы можете подать обращение Уполномоченному в течение года после выявления нарушения прав и свобод
+              человека и
+              гражданина. При наличии исключительных обстоятельств этот срок может быть продлен Уполномоченным, но не
+              более
+              чем до двух лет.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="appeal">
+      <div class="container">
+        <form action="" id="form__appeal" name="form__appeal">
+          <div class="appeal__form">
+            <h2 class="appeal__form-title font">
+              электронное обращение
+            </h2>
+            <p class="appeal__form-label font">ФИО: <span>*</span></p>
+            <div class="appeal__form-name">
+              <div class="input__wrapper">
+                <input type="text" class="appeal__form-input font" id="fsurname" name="fsurname" placeholder="Фамилия"
+                  required>
+              </div>
+              <div class="input__wrapper">
+                <input type="text" class="appeal__form-input font" id="fname" name="fname" placeholder="Имя" required>
+              </div>
+              <div class="input__wrapper">
+                <input type="text" class="appeal__form-input font" id="fpatronymic" name="fpatronymic"
+                  placeholder="Отчество" required>
+              </div>
+            </div>
+            <div class="appeal__form-address">
+              <p class="appeal__form-label font">Адрес: <span>*</span></p>
+              <div class="input__wrapper">
+                <textarea type="text" rows="2" class="appeal__form-input font" id="fcity" name="fcity" placeholder="(Область, район, населенный пункт,
+улица и т.д.)" required></textarea>
+              </div>
+              <div class="input__wrapper address">
+                <input type="text" class="appeal__form-input font" id="faddress" name="faddress"
+                  placeholder="(№ дома, корпус, квартира)" required>
+              </div>
+            </div>
+            <div class="appeal__form-contact">
+              <p class="appeal__form-label font">E-mail: <span>*</span></p>
+              <div class="input__wrapper">
+                <input type="email" class="appeal__form-input contact__input font" id="fmail" name="fmail"
+                  placeholder="E-mail" required>
+              </div>
+              <p class="appeal__form-label font">Контактный телефон:</p>
+              <input type="tel" class="appeal__form-input contact__input font" name="fphone"
+                pattern="\+38\s?[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="+380XXXXXXXXX">
+              <p class="appeal__form-label font">Текст сообщения: <span>*</span></p>
+              <div class="input__wrapper">
+                <textarea type="text" class="appeal__form-input font" id="fmessage" name="fmessage"
+                  placeholder="Сообщение" required></textarea>
+              </div>
+              <div class="appeal__form-additon">
+                <p class="font">
+                  Приложения: (загрузить сопроводительные документы)
+                </p>
+                <div class="appeal__form-additionBtn">
+                  <label for="myfile" class="fileLabel font">Выбрать файл</label>
+                  <input type="file" class="fileBtn" id="myfile" name="myfile" multiple="multiple"
+                    accept="application/pdf,image/jpeg,image/jpg,image/png" />
+                </div>
+              </div>
+              <div class="appeal__form-signature">
+                <p class="appeal__form-label font">Подпись: <span>*</span></p>
+                <!-- <div class="appeal__form-additionBtn">
+                  <label for="mysign" class="fileLabel">Підписати звернення ЕЦП (за бажанням)</label>
+                  <input type="file" class="fileBtn" id="mysign" name="mysign"
+                    accept="application/pdf,image/jpeg,image/jpg,image/png" />
+                </div> -->
+                <div class="appeal__form-additionBtn">
+                  <label for="mysignature" class="fileLabel font">Загрузить PDF, JPEG, JPG файл с подписью</label>
+                  <input type="file" class="fileBtn" id="mysignature" name="mysignature"
+                    accept="application/pdf,image/jpeg,image/jpg,image/png" />
+                </div>
+              </div>
+              <p class="appeal__form-reference font"><span>*</span> – обязательные поля для заполнения!</p>
+              <!-- <div class="appeal__consent">
+                <input type="checkbox" name="consent" id="consent" onchange="document.getElementById('validateBtn').disabled = !this.checked;">
+                <label for="consent">Даю згоду на обробку персональних даних</label>
+              </div> -->
+              <button class="appeal__form-btn font" type="submit" id="validateBtn">Отправить обращение</button>
+            </div>
+          </div>
+        </form>
+        <div class="form__sent">
+          <h2 class="appeal__form-title font">
+            благодарим за обращение
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="attention">
+      <div class="container">
+        <div class="attention__text font">
+          <p>
+            Внимание!</br>
+            Неподписанное электронное обращение, а также такое, из которого невозможно установить авторство, признается
+            анонимным и рассмотрению
+            не подлежит.
+          </p>
+          <p>
+            Регистрационный номер обращения будет направлен на указанный e-mail!
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__wrapper-hotline font">
+          <p>
+            Горячая линия
+            Уполномоченного ВРУ
+            по правам человека
+          </p>
+          <p><a href="tel:08005001720" class="footer__wrapper-phone font">0-800-500-17-20</a></p>
+        </div>
+        <div class="footer__wrapper-social">
+          <a href="https://www.youtube.com/channel/UCSqAq9COay89TfSjZ9WrpeQ" target="_blank"><img src="img/youtube.png"
+              alt="youtube"></a>
+          <a href="https://www.facebook.com/office.ombudsman.ua" target="_blank"><img src="img/facebook.png"
+              alt="facebook"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="fontsBtn">
+    <div class="fontsBtn__plus" id="plus"></div>
+    <div class="fontsBtn__minus" id="minus"></div>
+  </div>
+
+
+</body>
+
+<script src='js/main.min.js'></script>
+
+</html>
