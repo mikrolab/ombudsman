@@ -35,10 +35,18 @@ main {
     font-weight: 400;    
   }
   .fontsBtn__plus {
+    background-image: url(../img/plus.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
   }
 
   .fontsBtn__minus {
+    background-image: url(../img/minus.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
     display: none;
     cursor: pointer;
   }
