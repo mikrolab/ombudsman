@@ -13,9 +13,34 @@ main {
 
   a {
     color: #000;
-    &.active{
+
+    &.active {
       font-weight: 700;
     }
+  }
+}
+
+
+.fontsBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 30px;
+  font-size: 18px;
+  line-height: 34px;
+
+  p {
+    text-align: right;
+    font-style: normal;
+    font-weight: 400;    
+  }
+  .fontsBtn__plus {
+    cursor: pointer;
+  }
+
+  .fontsBtn__minus {
+    display: none;
+    cursor: pointer;
   }
 }
 
@@ -400,5 +425,8 @@ main {
   .appeal__consent {
     font-size: 18px;
     line-height: 25px;
+  }
+  .fontsBtn{
+    font-size: 14px;
   }
 }

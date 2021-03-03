@@ -142,7 +142,7 @@ $(document).ready(function () {
     $(".font").css('line-height','+=5' + 'px');
     $('.appeal__form-signature').find('label').css('height', '+=40' + 'px');
     $('.appeal__form-additon').find('label').css('height', '+=20' + 'px');
-    $('.appeal__form-input').css('height','+=5' + 'px');
+    $('.appeal__form-input').css('height','+=10' + 'px');
     fontIncrease++;
     if(fontIncrease == 1){
       $('#minus').css('display', 'block');
@@ -156,7 +156,7 @@ $(document).ready(function () {
     $(".font").css('line-height','-=5' + 'px');
     $('.appeal__form-signature').find('label').css('height', '-=40' + 'px');
     $('.appeal__form-additon').find('label').css('height', '-=20' + 'px');
-    $('.appeal__form-input').css('height','-=5' + 'px');
+    $('.appeal__form-input').css('height','-=10' + 'px');
     fontIncrease--;
     if(fontIncrease == 0){
       $('#minus').css('display', 'none');
