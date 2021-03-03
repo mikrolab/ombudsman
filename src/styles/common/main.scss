@@ -4,6 +4,13 @@ main {
 
 // section 1
 
+.info__menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: unset;
+}
+
 .info__languagues {
   text-align: right;
   font-style: normal;
@@ -28,12 +35,14 @@ main {
   height: 30px;
   font-size: 18px;
   line-height: 34px;
+  margin-left: 20px;
 
   p {
     text-align: right;
     font-style: normal;
-    font-weight: 400;    
+    font-weight: 400;
   }
+
   .fontsBtn__plus {
     background-image: url(../img/plus.png);
     background-size: cover;
@@ -352,6 +361,11 @@ main {
       width: 200px;
     }
   }
+
+  .info__menu-wrapper {
+    align-items: flex-end;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 660px) {
@@ -434,7 +448,8 @@ main {
     font-size: 18px;
     line-height: 25px;
   }
-  .fontsBtn{
+
+  .fontsBtn {
     font-size: 14px;
   }
 }
