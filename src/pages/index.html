@@ -15,6 +15,9 @@
 <body>
 
   <header class="header">
+    <div class="header__info">
+      <p>Увага сервіс працює в тестовому режимі</p>
+    </div>
     <div class="container">
       <img src="img/logo.png" alt="logo" class="header__logo">
     </div>
@@ -123,7 +126,11 @@
                 </div>
               </div>
               <p class="appeal__form-reference"><span>*</span> – обовязкові поля для заповнення!</p>
-              <button class="appeal__form-btn" type="submit" id="validateBtn">Відправити звернення</button>
+              <div class="appeal__consent">
+                <input type="checkbox" name="consent" id="consent" onchange="document.getElementById('validateBtn').disabled = !this.checked;">
+                <label for="consent">Даю згоду на обробку персональних даних</label>
+              </div>
+              <button class="appeal__form-btn" type="submit" id="validateBtn" disabled>Відправити звернення</button>
             </div>
           </div>
         </form>
@@ -163,9 +170,9 @@
           <p><a href="tel:08005001720" class="footer__wrapper-phone">0-800-500-17-20</a></p>
         </div>
         <div class="footer__wrapper-social">
-          <a href="https://www.youtube.com/channel/UCSqAq9COay89TfSjZ9WrpeQ"><img src="img/youtube.png"
+          <a href="https://www.youtube.com/channel/UCSqAq9COay89TfSjZ9WrpeQ" target="_blank"><img src="img/youtube.png"
               alt="youtube"></a>
-          <a href="https://www.facebook.com/office.ombudsman.ua"><img src="img/facebook.png" alt="facebook"></a>
+          <a href="https://www.facebook.com/office.ombudsman.ua" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
         </div>
       </div>
     </div>

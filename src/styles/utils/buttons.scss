@@ -56,4 +56,15 @@
   &:active {
     box-shadow: 5px 5px 9px 6px rgba(7, 17, 31, 0.45);
   }
+
+  &:disabled{
+    background: gray;
+    &:hover {
+      box-shadow: none;
+    }
+  
+    &:active {
+      box-shadow: none;
+    }
+  }
 }

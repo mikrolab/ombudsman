@@ -228,6 +228,18 @@ main {
   }
 }
 
+.appeal__consent {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #000;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
 .appeal__form-additionBtn {
   position: relative;
 }
@@ -367,5 +379,10 @@ main {
   .attention__text {
     font-size: 24px;
     line-height: 34px;
+  }
+
+  .appeal__consent {
+    font-size: 18px;
+    line-height: 25px;
   }
 }
