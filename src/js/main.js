@@ -78,6 +78,25 @@ $(document).ready(function () {
             setTimeout(function () {
               $(".form__sent").css("opacity", "1");
             }, 500)
+            setTimeout(function () {
+              $("html").css("overflow-y", "hidden");
+              $(".notification").css("display", "block");
+              var d = new Date();
+              var hours = d.getHours();
+              var minutes = d.getMinutes();
+              var month = d.getMonth() + 1;
+              var day = d.getDate();
+              var output = (day < 10 ? '0' : '') + day + '.' +
+                (month < 10 ? '0' : '') + month + '.' +
+                + d.getFullYear() + ' ' + (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+              $("#date").html(output);
+            }, 500)
+            setTimeout(function () {
+              if ($(".notification").css("display") == "block") {
+                $(".notification").css("display", "none");
+                $("html").css("overflow-y", "auto");
+              }
+            }, 15000)
           },
           error: function () {
             $('#validateBtn').attr('disabled', 'false');
@@ -92,7 +111,7 @@ $(document).ready(function () {
   const pathIndex = window.location.pathname.lastIndexOf('/') + 1
   pageName = pathName.substring(pathIndex)
   console.log(pageName)
-  switch (pageName){
+  switch (pageName) {
     case '':
       $('#myfile').change(function () {
         var i = $(this).prev('label').clone();
@@ -120,7 +139,7 @@ $(document).ready(function () {
         var i = $(this).prev('label').clone();
         $(this).prev('label').text('Файл выбран');
       });
-    break;
+      break;
     case 'cri.html':
       $('#myfile').change(function () {
         var i = $(this).prev('label').clone();
@@ -138,31 +157,37 @@ $(document).ready(function () {
   }
   var fontIncrease = 0;
   $('#plus').click(function () {
-    $(".font").css('font-size','+=5');
-    $(".font").css('line-height','+=5' + 'px');
+    $(".font").css('font-size', '+=5');
+    $(".font").css('line-height', '+=5' + 'px');
     $('.appeal__form-signature').find('label').css('height', '+=40' + 'px');
     $('.appeal__form-additon').find('label').css('height', '+=20' + 'px');
-    $('.appeal__form-input').css('height','+=10' + 'px');
+    $('.appeal__form-input').css('height', '+=10' + 'px');
     fontIncrease++;
-    if(fontIncrease == 1){
+    if (fontIncrease == 1) {
       $('#minus').css('display', 'block');
     }
-    if(fontIncrease == 2){
+    if (fontIncrease == 2) {
       $('#plus').css('display', 'none');
     }
   })
   $('#minus').click(function () {
-    $(".font").css('font-size','-=5');
-    $(".font").css('line-height','-=5' + 'px');
+    $(".font").css('font-size', '-=5');
+    $(".font").css('line-height', '-=5' + 'px');
     $('.appeal__form-signature').find('label').css('height', '-=40' + 'px');
     $('.appeal__form-additon').find('label').css('height', '-=20' + 'px');
-    $('.appeal__form-input').css('height','-=10' + 'px');
+    $('.appeal__form-input').css('height', '-=10' + 'px');
     fontIncrease--;
-    if(fontIncrease == 0){
+    if (fontIncrease == 0) {
       $('#minus').css('display', 'none');
     }
-    if(fontIncrease != 0){
+    if (fontIncrease != 0) {
       $('#plus').css('display', 'block');
     }
   })
 });
+
+
+$("#close__notification").click(function () {
+  $(".notification").css("display", "none");
+  $("html").css("overflow-y", "auto");
+})
